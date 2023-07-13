@@ -5,7 +5,7 @@
 <script>
 export default {
     name: 'DataBinding',
-    data () {
+    data() {
         return {
             title: 'World'
         }
