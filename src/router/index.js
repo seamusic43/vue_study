@@ -1,6 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import DataBinding from '../views/DataBindingHtml.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
+import DataBinding from '../views/DataBindingHtml.vue';
+import NestedComponent from '../views/NestedComponent.vue';
 // import AboutView from '../views/AboutView.vue'
 
 const routes = [
@@ -19,15 +20,20 @@ const routes = [
         // component: AboutView
     },
     {
+        path: '/detail',
+        name: 'DetailComponent',
+        component: NestedComponent
+    },
+    {
         path: '/databinding',
         name: 'DataBinding',
         component: DataBinding
     }
-]
+];
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes
-})
+});
 
-export default router
+export default router;

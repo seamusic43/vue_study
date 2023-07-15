@@ -1,6 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
+    <router-link to="/detail">Detail Components</router-link> |
     <router-link to="/databinding">Data Binding</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
