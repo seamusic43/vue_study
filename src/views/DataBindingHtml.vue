@@ -91,11 +91,7 @@ export default {
             type: 'B',
             lastName: 'last',
             firstName: 'first',
-            productList: [
-                { product_name: '기계식키보드', price: 25000, category: '노트북/태블릿', delivery_price: 5000 },
-                { product_name: '테이프 털실', price: 3900, category: '수예용품', delivery_price: 3000 },
-                { product_name: '선풍기', price: 9900, category: '생필품', delivery_price: 3000 }
-            ],
+            productList: [],
             htmlString: '<p style="color:red;">This is red string</p>',
             valueModel: 'South Korea',
             numberModel: 3,
@@ -115,36 +111,42 @@ export default {
             w_fullName: '',
             w_first: 'first',
             w_last: 'last'
-        }
+        };
+    },
+    created() {
+        this.getList();
     },
     methods: {
+        async getList() {
+            this.productList = await this.$api('https://37ee9c43-ec89-4825-89d1-37cfac360a4c.mock.pstmn.io/list', 'get');
+        },
         increaseCount() {
-            this.count = this.count + 1
+            this.count = this.count + 1;
         },
         setCount(c) {
-            this.count = c
+            this.count = c;
         },
         one() {
-            alert('one')
+            alert('one');
         },
         changeSelect() {
-            alert(this.city)
+            alert(this.city);
         }
     },
     computed: {
         fullName() {
-            return this.lastName + '-' + this.firstName
+            return this.lastName + '-' + this.firstName;
         }
     },
     watch: {
         w_first() {
-            this.w_fullName = this.w_first + ' + ' + this.w_last
+            this.w_fullName = this.w_first + ' + ' + this.w_last;
         },
         w_last() {
-            this.w_fullName = this.w_first + '=' + this.w_last
+            this.w_fullName = this.w_first + '=' + this.w_last;
         }
     }
-}
+};
 </script>
 
 <style scoped>
