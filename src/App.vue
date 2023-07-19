@@ -3,7 +3,10 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/detail">Detail Components</router-link> |
     <router-link to="/databinding">Data Binding</router-link> |
-    <router-link to="/about">About</router-link>
+    <router-link to="/about">About</router-link> |
+    <router-link to="/Kakaologin">Kakao Login</router-link> |
+    <router-link to="/Naverlogin">Naver Login</router-link> |
+    <router-link to="/Googlelogin">Google Login</router-link> |
   </nav>
   <router-view/>
 </template>
